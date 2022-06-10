@@ -1,7 +1,7 @@
 
 # click on run button . It will install all dependencies .
 
-# on command line run 'python app.py' in Replit . It will start the flask app .
+# on command line run 'python app.py' . It will start the flask app .
 
 # template files are included in folder named 'templates'
 
