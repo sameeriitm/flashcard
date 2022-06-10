@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Review </title>
+  <link rel='stylesheet' href='/static/review.css' type='text/css'>
+</head>
+<body>
+
+     <div id= 'menu'>
+          <ul> 
+               <li>  <a href='/dashboard'> Dashboard </a></li>
+                <li> <a href='/logout'> Logout </a></li>
+          </ul>
+     </div>
+      
+
+    {% if value=='next' %}
+        <div id='card'> {{card.front}} </div>
+    {% endif %}
+    
+     {% if value=='flip' %}
+        <div id='flip'> {{card.front}} </br>
+        -------------</br>
+        {{card.back}}
+        </div>
+    {% endif %}
+    
+  <form action='/deck/{{deck.id}}/review' id='review-form' method='POST'>
+    <div id='radio'>
+          <label> Easy </label>
+          <input type='radio' name='review' value='1'></br>
+          <label> Moderate </label>
+          <input type='radio' name='review' value='2'></br>
+          <label> Difficult </label>
+          <input type='radio' name='review' value='3' checked>
+          <input type="hidden" id="card_no" name="card_no" value="{{card.id}}" </br>
+          <input type='submit' name='action' value = 'next' id='next'>
+            
+          <input type='submit' name='action' value = 'flip' id='flip2'>
+   
+    </form>  
+     
+</body>
+</html>

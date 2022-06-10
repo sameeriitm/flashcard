@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Deck</title>
+  <link rel='stylesheet' href='/static/update_deck.css' type='text/css'>
+</head>
+<body>
+  <form action='/deck/{{deck.id}}/update' method='POST'>
+  <div>
+     <h3>   Old Deck Name : {{ deck.Deck_name }} <h3></br>
+    <label> Updated_Deck_Name: </label>
+    <input type='text' name='deck_name' required/></br>
+    <input type='submit' value='submit'>
+  </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Card</title>
+  <link rel='stylesheet' href='/static/update_card.css' type='text/css'>
+</head>
+<body>
+    
+  <form action='/deck/{{deck_id}}/{{card_id}}/update' method='POST'>
+      <div>
+        <label> Front: </label>
+        <input type='text' name='front' required/></br></br>
+        <label> Back: </label>
+        <input type='text' name='back' required/></br></br>
+        <input type='submit' value='submit'>
+     </div>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title> Dashboard </title>
+  <link href='static/dashboard.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <h1> Welcome {{current_user.name}} </h1>
+     <div id= 'menu'>
+      <ul> 
+        <li>  <a href='/'> Home </a></li>
+        <li> <a href= '/logout'> Logout </a></li>
+      </ul>
+      </div>
+      
+     <table>
+         <thead>
+             <tr>
+                 <th> S_No </th>
+                 <th> Deckname </th>
+                 <th> Last_Review_Time </th>
+                 <th> Last_Reviewed_Score </th>
+                 <th> Cards </th>
+                 <th> Review </th>
+                 <th> Edit </th>
+                 <th> Delete </th>
+            </tr>
+             {% for deck in decks %}
+            <tr>
+                     <td> {{deck.id}} </td>
+                     <td> {{deck.Deck_name}} </td>
+                     <td> {{deck.review_time}} </td>
+                     <td> {{deck.score}} </td>
+                     <td> <a href = '/deck/{{deck.id}}/show_card'> Cards </a>
+                     <td><a href='/deck/{{deck.id}}/review'>  Review </td>
+                     <td><a href='/deck/{{deck.id}}/update'> Edit </a></td>
+                     <td><a href='/deck/{{deck.id}}/delete'>Delete </a></td>
+                
+            </tr>
+             {% endfor %}
+        </thead>
+        <tbody>
+    </table> 
+    <a href='/add_deck'> Add Deck </a>   
+</body>
+</html>

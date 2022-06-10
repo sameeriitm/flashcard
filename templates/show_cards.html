@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cards</title>
+  <link href='/static/showcards.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+     <div id= 'menu'>
+          <ul> 
+               <li>  <a href='/dashboard'> Dashboard </a></li>
+                <li> <a href='/logout'> Logout </a></li>
+          </ul>
+     </div>
+      
+    <h1> Insert Cards In {{deck.Deck_name}} </h1>
+   
+     <table>
+         <thead>
+             <tr>
+                 <th> S_No </th>
+                 <th> Front </th>
+                 <th> Back </th>
+                 <th> Reviewed_Score </th>
+                 <th> Last_Review_Time </th>
+                 <th> Edit </th>
+                 <th> Delete </th>
+            </tr>
+             {% for card in cards %}
+            <tr>
+                     <td> {{loop.index}} </td>
+                     <td> {{card.front}} </td>
+                     <td> {{card.back}} </td>
+                     <td> {{card.score}} </td>
+                     <td> {{card.review_time}} </td>
+                     <td><a href='/deck/{{deck.id}}/{{card.id}}/update'> Update </a></td>
+                     <td><a href='/deck/{{deck.id}}/{{card.id}}/delete'> Delete </a></td>
+                    
+                
+            </tr>
+             {% endfor %}
+        </thead>
+    </table> 
+    <a href='/deck/{{deck.id}}/add_card'> Add Card </a>   
+</body>
+</html>

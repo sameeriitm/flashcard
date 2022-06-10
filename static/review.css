@@ -1,0 +1,92 @@
+*{
+  margin:5px;
+  padding:0;
+}
+body{
+
+  background-color:aquamarine;
+  
+}
+
+li {
+  
+  display: inline;
+
+}
+
+#menu{
+
+  height:50px;
+  background-color:black;
+}
+
+#radio{
+
+   
+    font-size: 30px;
+
+}
+
+#card{
+    background-color: white;
+    border: 3px solid yellow;
+    width: 500px;
+    height: 400px;
+    font-size: 150px;
+    color: red;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    word-break:break-word;
+}
+
+#flip{
+    background-color: white;
+    border: 3px solid yellow;
+    width: 500px;
+    height: 400px;
+    font-size: 100px;
+    color: red;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    word-break:break-word;
+}
+
+#next{
+    background-color:pink;
+    padding: 10px;
+    width: 100px;
+   
+
+}
+
+#flip2{
+
+    background-color:pink;
+    padding: 10px;
+    width:100px;
+    margin-left:100em;
+    margin-right:auto;
+    margin-bottom: 10em;
+    margin-top: auto;
+    position:relative;
+}
+
+th{
+    border:3px solid aquamarine;
+
+}
+
+a{
+  text-decoration:none;
+}
+a:visited{
+  color:blue;
+}
+a:hover{
+  color:red;
+}
+a:active{
+  color:green;
+}

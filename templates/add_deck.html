@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Deck</title>
+  <link rel='stylesheet' href='/static/add_deck.css' type='text/css'>
+</head>
+<body>
+    <h1> Add New Deck For {{current_user.name}}<h1>
+  <form action='/add_deck' method='POST'>
+      <div>
+        <label> Deck_name: </label>
+        <input type='text' name='deck_name' required/></br></br>
+        <input type='submit' value='submit'>
+      </div>
+  </form>
+</body>
+</html>
