@@ -199,7 +199,7 @@ def review(deck_id):
     db.session.commit()
     return render_template('review.html',card=card,deck=deck,value='next')
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
 
 # from datetime import datetime
